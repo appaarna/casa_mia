@@ -24,7 +24,7 @@ export default function Home() {
             </span>
           </h1>
           <p className="mx-auto max-w-2xl text-lg text-muted md:text-xl">
-            A minimalist, highly-focused platform designed to transform YouTube playlists into tracked, locked, and progressive courses.
+            A minimalist, highly-focused platform designed to transform video modules into tracked, locked, and progressive courses.
           </p>
         </div>
 
@@ -50,7 +50,7 @@ export default function Home() {
         {[
           {
             title: "Playlist Sync",
-            desc: "Ingest any YouTube playlist instantly with full metadata extraction.",
+            desc: "Ingest any video module instantly with full metadata extraction.",
             accent: "bg-coral"
           },
           {

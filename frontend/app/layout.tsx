@@ -17,7 +17,7 @@ const fraunces = Fraunces({
 
 export const metadata: Metadata = {
   title: "Casa Mia — Your Curated Learning Library",
-  description: "A beautiful YouTube-powered learning platform. Master curated playlists at your own pace."
+  description: "A beautiful curated learning platform. Master modules at your own pace."
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

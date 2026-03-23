@@ -104,7 +104,7 @@ export default function SubjectDetailPage() {
                     </div>
                 )}
                 <div className="absolute top-4 left-4 rounded-md bg-charcoal-900/90 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-pink backdrop-blur-sm border border-charcoal-600/50">
-                    YouTube Playlist
+                    Video Course
                 </div>
             </div>
 
