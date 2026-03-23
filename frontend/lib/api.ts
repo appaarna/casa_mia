@@ -72,7 +72,7 @@ async function refreshToken(): Promise<boolean> {
 }
 
 export async function login(email: string, password: string) {
-  const data = await apiFetch<{ user: { id: number; email: string; name: string }; accessToken: string }>(
+  const data = await apiFetch<{ user: { id: number; email: string; name: string; role: string }; accessToken: string }>(
     "/auth/login",
     { method: "POST", body: JSON.stringify({ email, password }) }
   );
@@ -81,7 +81,7 @@ export async function login(email: string, password: string) {
 }
 
 export async function register(email: string, password: string, name: string) {
-  const data = await apiFetch<{ user: { id: number; email: string; name: string }; accessToken: string }>(
+  const data = await apiFetch<{ user: { id: number; email: string; name: string; role: string }; accessToken: string }>(
     "/auth/register",
     { method: "POST", body: JSON.stringify({ email, password, name }) }
   );
