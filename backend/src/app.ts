@@ -15,9 +15,20 @@ import { videosRouter } from "./modules/videos/videos.routes";
 export function createApp() {
   const app = express();
 
+  const allowedOrigins = env.nodeEnv === "development"
+    ? ["http://localhost:3000", "http://localhost:3001"]
+    : [env.appOrigin];
+
   app.use(
     cors({
-      origin: env.appOrigin,
+      origin: (origin, callback) => {
+        // Allow requests with no origin (like mobile apps, Postman, or server-to-server)
+        if (!origin || allowedOrigins.includes(origin)) {
+          callback(null, true);
+        } else {
+          callback(new Error(`CORS blocked: ${origin}`));
+        }
+      },
       credentials: true
     })
   );
